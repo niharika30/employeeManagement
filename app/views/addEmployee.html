@@ -1,0 +1,82 @@
+﻿<div class="view">
+    <div class="container">
+        <header>
+            <h3><span class="glyphicon glyphicon-edit"></span> Add New Employee</h3>
+        </header>
+        <form name="addForm" novalidate>
+            <div class="addEmployee">
+                
+                <div class="row">
+                    <div class="col-md-2">
+                        Employee Name:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="employeeName" class="form-control" ng-model="main.employeeName" required />
+                        <span class="errorMessage" ng-show="addForm.employeeName.$touched && addForm.employeeName.$invalid">
+                            First name is required
+                        </span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Department:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="department" class="form-control" ng-model="main.department" required />
+                        <span class="errorMessage" ng-show="addForm.department.$touched && addForm.department.$invalid">
+                           Department is required
+                        </span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Title:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="title" class="form-control" ng-model="main.title" required />
+                        <span class="errorMessage" ng-show="addForm.title.$touched && addForm.title.$invalid">
+                           Title is required
+                        </span>
+                    </div>
+                </div>
+                <br />
+                 <div class="row">
+                    <div class="col-md-2">
+                        Date Of Birth:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="dob" class="form-control" ng-model="main.dob"/>
+                    </div>
+                </div>
+                <br />
+                 <div class="row">
+                    <div class="col-md-2">
+                        Date of Joining:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="doj" class="form-control" ng-model="main.doj"/>
+                    </div>
+                </div>
+                <br />
+               
+                
+               
+               
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary" ng-click="main.addEmployee(main.employeeName,main.department,main.title,main.dob,main.doj)"
+                                ng-disabled="addForm.$invalid || !addForm.$dirty">
+                            Submit
+                        </button>
+                      
+                       
+                    </div>
+                </div>
+                <br />
+               
+            </div>
+        </form>
+    </div>
+</div>

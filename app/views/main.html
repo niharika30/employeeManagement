@@ -1,0 +1,95 @@
+<div class="customers view indent">
+    <div class="container-fluid">
+<header>
+<h3> <span class="glyphicon glyphicon-user"></span>Employee</h3>
+</header>
+ <div class="row">
+            <div class="col-md-10">
+                <div class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="toolbaritem">
+                            <a  ng-click="main.changeDisplayMode(main.displayMode.card)">
+                                <span class="glyphicon glyphicon-th-large"></span>Card View
+                            </a>
+                        </li>
+                        <li class="toolbaritem">
+                            <a ng-click="main.changeDisplayMode(main.displayMode.list)">
+                                 <span class="glyphicon glyphicon-align-justify"></span>List View
+                            </a>
+                        </li>
+                        <li class="toolbaritem">
+                            <a href="" ng-click="main.changeDisplayMode(main.displayMode.details)">
+                                 <span class="glyphicon glyphicon-align-justify"></span>Detail View
+                            </a>
+                        </li>
+                        <li class="toolbaritem">
+                            <a href="#addEmployee">
+                              <span class="glyphicon glyphicon-plus"></span> Add Employee
+                            </a>
+                        </li>
+                    </ul>
+                    
+                         <span class="navbar-right navbarText col-sm-2">   Filter:
+                            <input type="text" ng-model="main.searchText">
+                            Sort:</br>
+                             <select ng-model="main.sortValue">
+                               <option value="employeeName">Employee Name</option>
+                               <option value="Department">Department</option>
+                               <option value="Title">Title</option>
+                            </select> </span>
+                       
+                </div>
+            </div>
+        </div>
+		<div class="container-fluid">
+		<div class="row cardContainer">
+		<div class="col-sm-6 col-md-4 col-lg-3">
+        <div ng-if="main.cardDisplayModeEnabled">
+<div ng-repeat="employee in main.employeeDetails | filter:main.searchText | orderBy:main.sortValue" class="display">
+        <div class="card">
+		<div class="cardBody">
+		<div class="clearfix">
+    <h4><span class="cardBodyContent" ng-bind="employee.employeeName"></span></h4> 
+    <p><span class="cardBodyContent" ng-bind="employee.Department"></span></p>
+    <p><span class="cardBodyContent" ng-bind="employee.Title"></span></p>
+  
+</div>
+</div></div>
+</div>
+</div>
+</div></div></div>
+
+
+<div class="row gridContainer" ng-if="main.listDisplayModeEnabled || main.detailDisplayModeEnabled">
+                <div class="col-md-10">
+                    <div ng-repeat="employee in main.employeeDetails | filter:main.searchText | orderBy:main.sortValue">
+                        <table class="table table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>Employee Name</th>
+                                    <th>Department</th>
+                                    <th>Title</th>
+                                    <th ng-if="main.detailDisplayModeEnabled">DOB</th>
+                                    <th ng-if="main.detailDisplayModeEnabled">DOJ</th>
+                                    
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td><span ng-bind="employee.employeeName"></span></td>
+                                    <td><span ng-bind="employee.Department"></span></td>
+                                    <td><span ng-bind="employee.Title"></span></td>
+                                    <td ng-if="main.detailDisplayModeEnabled"><span ng-bind="employee.DOB"></span></td>
+                                    <td ng-if="main.detailDisplayModeEnabled"><span ng-bind="employee.DOJ"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    

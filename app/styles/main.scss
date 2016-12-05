@@ -1,0 +1,231 @@
+// bower:scss
+// endbower
+
+
+body {
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+header,
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+   height: 50px;
+}
+
+h1 {
+  margin-left: 20px;
+  display: inline;
+}
+
+header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+#ng-view {
+    position: relative;
+    padding-top: 50px;
+}
+
+.card {
+    background-color:#fff;
+    border: 1px solid #d4d4d4;
+    height:100px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cardHeader {
+    background-color:#027FF4;
+    font-size:14pt;
+    color:white;
+    padding:5px;
+    width:100%;
+}
+
+.cardContainer {
+    width:85%;
+}
+
+.cardBody {
+    padding-left: 5px;
+}
+
+.cardBodyContent {
+    width: 100px;
+}
+
+
+
+.indent {
+    margin-left:5px;
+}
+
+
+.gridContainer td {
+    vertical-align: middle;
+}
+
+footer {
+    margin-top:10px;
+    font-weight: bold;
+}
+
+.employeeAdd input[type='text'], 
+
+.cardContainer .col-md-3 {
+    padding-left: 0px;
+}
+
+.gridContainer  div {
+    padding-left: 0px;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background-color: #efefef;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #808080;
+}
+
+.navbar .nav li.toolbaritem a:hover, .navbar .nav li a:hover {
+    color: #E03930;
+}
+
+.navbar .nav > li  {
+    cursor:pointer;
+}
+
+    .navbar .nav > li > a {
+        color: white;
+        font-weight:bold;
+        -webkit-text-shadow: none;
+        text-shadow: none;
+        height:30px;
+        padding-top: 6px;
+        padding-bottom: 0px;
+    }
+
+    .navbar .nav > li.toolbaritem > a {
+        color: black;
+        font-weight:bold;
+        -webkit-text-shadow: none;
+        text-shadow: none;
+    }
+
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  -webkit-box-shadow: 0 1px 00px rgba(0, 0, 0, 0);
+     -moz-box-shadow: 0 1px 00px rgba(0, 0, 0, 0);
+          box-shadow: 0 1px 00px rgba(0, 0, 0, 0);
+}
+
+.nav.navBarPadding {
+    margin-left:25px;
+    margin-top: 10px;
+}
+
+.navbarText {
+    font-weight:bold;
+}
+
+.navbar .brand {
+    margin-top: 2px;
+    color: #fff;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+
+
+.btn.active {
+  background-color: #f7f7f7;
+}
+
+.novalidate {
+    border-left: none !important;
+}
+
+input.ng-invalid, select.ng-invalid, input.ng-invalid-required, select.ng-invalid-required {
+  border-left: 5px solid #E03930;
+}
+
+input.ng-valid, select.ng-valid, input.ng-valid-required, select.ng-valid-required {
+  border-left: 5px solid #57A83F;
+}
+
+.errorMessage {
+    position:absolute;
+    padding: 5px;
+    background-color: #E03930;
+    color:white;
+    top:0px;
+    left:270px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    navbar-toggle { 
+        display: none;
+    }
+
+    #ng-view {
+        padding-top: 90px;
+    }
+
+    .navbar-brand {
+        font-size: 12pt;
+    }
+
+    .nav.navBarPadding {
+        margin-left: -10px;
+    }
+
+    .nav > li > a {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  header,
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+    height: 50px;
+  }
+  /* Space out the masthead */
+  header {
+    margin-bottom: 30px;
+  }
+  
+}
